@@ -7,7 +7,7 @@ if(!isset($_SESSION['logged'])) {
 $posts = all('posts');
 ?>
 
-<a href="">Criar post</a>
+<a href="?page=create_post">Criar post</a>
 <table>
     <thead>
         <th>Id</th>
@@ -24,8 +24,8 @@ $posts = all('posts');
                 <td><?= $post->subtitle ?></td>
                 <td><?= $post->date ?></td>
                 <td>
-                    <a href="?page=edit_post&id=<?php $post->id ?>">Editar</a>
-                    <a>Excluir</a>
+                    <a href="?page=edit_post&id=<?= $post->id ?>">Editar</a>
+                    <a href="?page=delete_post&id=<?= $post->id ?>">Excluir</a>
                 </td>
             </tr>
         <?php endforeach; ?>
