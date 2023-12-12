@@ -63,7 +63,7 @@ function all($table) {
 function find($table, $field, $value) {
     $pdo = connect();
 
-    $value = filter_var($value, FILTER_SANITIZE_NUMBER_INT);
+    // $value = filter_var($value, FILTER_SANITIZE_NUMBER_INT);
 
     $sql = "SELECT * FROM {$table} WHERE {$field} = :{$field}";
 
