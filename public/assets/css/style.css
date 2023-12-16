@@ -30,3 +30,26 @@ body {
 .wrapper-header .logo a {
     font-size: 2rem;
 }
+.alert {
+    border-radius: 10px;
+    background: #ffa4a4;
+    color: #630000;
+    border: #d79c9c 2px solid;
+    font-weight: 600;
+    padding: 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 2s
+}
+.alert.alert-danger {
+    background: #ffa4a4;
+    color: #630000;
+    border: #d79c9c 2px solid;
+}
+.alert.alert-success {
+    background: #a4ffa9;
+    color: #006310;
+    border: #9cd7a9 2px solid;
+}

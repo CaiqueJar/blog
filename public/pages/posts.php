@@ -6,28 +6,35 @@ if(!isset($_SESSION['logged'])) {
 }
 $posts = all('posts');
 ?>
-
-<a href="?page=create_post">Criar post</a>
-<table>
-    <thead>
-        <th>Id</th>
-        <th>Título</th>
-        <th>Subtítulo</th>
-        <th>Data</th>
-        <th>Ações</th>
-    </thead>
-    <tbody>
-        <?php foreach($posts as $post): ?>
-            <tr>
-                <td><?= $post->id ?></td>
-                <td><?= $post->title ?></td>
-                <td><?= $post->subtitle ?></td>
-                <td><?= $post->date ?></td>
-                <td>
-                    <a href="?page=edit_post&id=<?= $post->id ?>">Editar</a>
-                    <a href="?page=delete_post&id=<?= $post->id ?>">Excluir</a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+<?= get('success') ?>
+<link rel="stylesheet" href="assets/css/posts.css">
+<main>
+    <div class="content">
+        <div class="wrapper">
+            <a class="create-post" href="?page=create_post">Criar post</a>
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Título</th>
+                    <th>Subtítulo</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <?php foreach($posts as $post): ?>
+                        <tr>
+                            <td><?= $post->id ?></td>
+                            <td><?= $post->title ?></td>
+                            <td><?= $post->subtitle ?></td>
+                            <td><?= $post->date ?></td>
+                            <td>
+                                <a href="?page=edit_post&id=<?= $post->id ?>">Editar</a>
+                                <a href="?page=delete_post&id=<?= $post->id ?>">Excluir</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

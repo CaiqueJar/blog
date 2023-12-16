@@ -11,11 +11,11 @@
     if($user) {
         if($user->password == $validate->password) {
             $_SESSION['logged'] = true;
+            flash('success', 'Logado com sucesso!', 'success');
             return redirect('posts');
         }
-        flash('error', 'Login ou senha incorretos!');
-        return redirect('login');
     }
+
     flash('error', 'Login ou senha incorretos!');
     return redirect('login');
 ?>

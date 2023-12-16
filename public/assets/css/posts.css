@@ -1,0 +1,15 @@
+.wrapper {
+    padding: 20px;
+}
+.create-post {
+    color: white;
+    background: green;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.wrapper table {
+    margin-top: 20px;
+    width: 100%;
+}

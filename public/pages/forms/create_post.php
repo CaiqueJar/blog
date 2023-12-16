@@ -8,6 +8,10 @@ $validate = validate([
     'text' => 's'
 ]);
 
+$upload_dir = 'assets/uploads/';
+
+dd($_POST['image']);
+
 $post = create('posts', $validate);
 
 if($post) {

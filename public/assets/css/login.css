@@ -1,0 +1,37 @@
+.wrapper-login {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 360px;
+    background: #f7f7f7;
+    padding: 32px;
+    border-radius: 20px;
+}
+.wrapper-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.wrapper-login form .input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.wrapper-login form .input label {
+    font-weight: 500;
+}
+.wrapper-login form .input input {
+    padding: 6px;
+    border-radius: 10px;
+    border: #b3b3b3 1px solid;
+}
+.wrapper-login form button {
+    border: none;
+    border-radius: 10px;
+    background: green;
+    color: white;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
