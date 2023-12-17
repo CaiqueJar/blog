@@ -26,7 +26,7 @@ $posts = all('posts');
                             <td><?= $post->id ?></td>
                             <td><?= $post->title ?></td>
                             <td><?= $post->subtitle ?></td>
-                            <td><?= $post->date ?></td>
+                            <td><?= $post->created_at ?></td>
                             <td>
                                 <a href="?page=edit_post&id=<?= $post->id ?>">Editar</a>
                                 <a href="?page=delete_post&id=<?= $post->id ?>">Excluir</a>

@@ -5,3 +5,36 @@ main {
     text-align: center;
     padding: 42px;
 }
+section.posts .cards {
+    display: flex;
+    gap: 48px;
+    padding: 20px 72px;
+}
+section.posts .cards .card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    min-height: 340px;
+    border: #a5a5a5 1px solid;
+    border-radius: 6px;
+}
+section.posts .cards .card .wrapper-img {
+    height: 200px;
+}
+section.posts .cards .card .wrapper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.posts .cards .card .wrapper-text {
+    position: relative;
+    height: 100%;
+    padding: 6px;
+}
+section.posts .cards .card .wrapper-text .more {
+    position: absolute;
+    bottom: 6px;
+    color: #141414;
+    text-decoration: none;
+    font-weight: 700;
+}
