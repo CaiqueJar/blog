@@ -1,14 +1,52 @@
+.separator {
+    width: 40%;
+    margin: auto;
+}
 main {
     background-color: #f7f7f7;
+    color: #262626;
 }
 .wrapper-main {
     text-align: center;
     padding: 42px;
 }
+section.latest .wrapper-latest {
+    display: flex;
+    height: 480px
+}
+section.latest .wrapper-latest .wrapper-img {
+    flex-basis: 60%;
+}
+section.latest .wrapper-latest .wrapper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.latest .wrapper-latest .wrapper-text {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #262626;
+}
+section.latest .wrapper-latest .wrapper-text a {
+    color: #262626;
+    text-decoration: none;
+    margin-top: 12px;
+    font-weight: 700;
+}
+section.posts .wrapper-cards {
+    padding: 0 72px;
+}
+section.posts .wrapper-cards h2 {
+    color: #262626;
+    font-weight: 400;
+    
+}
 section.posts .cards {
     display: flex;
     gap: 48px;
-    padding: 20px 72px;
+    padding: 20px 0;
 }
 section.posts .cards .card {
     display: flex;
@@ -34,7 +72,7 @@ section.posts .cards .card .wrapper-text {
 section.posts .cards .card .wrapper-text .more {
     position: absolute;
     bottom: 6px;
-    color: #141414;
+    color: #262626;
     text-decoration: none;
     font-weight: 700;
 }

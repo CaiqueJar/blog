@@ -1,0 +1,39 @@
+main .wrapper-main {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+main .post {
+    flex-basis: 65%;
+}
+main .post .image {
+    width: 480px;
+    height: 260px;
+}
+main .post .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+main .post .text {
+    padding: 20px;
+}
+main .others {
+    flex-basis: 35%;
+}
+main .others ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.2rem;
+    width: fit-content;
+    border-left: #262626 2px solid;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+main .others ul a {
+    color: #262626;
+    text-decoration: none;
+}

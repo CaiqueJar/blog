@@ -14,12 +14,31 @@ body {
     padding: 0 20px;
     overflow: hidden;
 }
+header {
+    box-shadow: 0 4px 6px #f7f7f7;
+}
 .wrapper-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     margin-bottom: 20px;
+}
+.wrapper-header .search {
+    position: relative;
+}
+.wrapper-header .search input {
+    padding: 6px;
+    border-radius: 10px;
+    border: #b3b3b3 1px solid;
+}
+.wrapper-header .search #result  {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+}
+.wrapper-header .search #result li {
+    border: #b3b3b3 1px solid;
 }
 .wrapper-header .logo a, 
 .wrapper-header .login a {
