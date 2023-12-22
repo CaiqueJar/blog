@@ -7,5 +7,8 @@
             "app/functions/validate.php",
             "app/functions/flash.php"
         ]
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
     }
 }

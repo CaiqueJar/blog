@@ -15,28 +15,30 @@ $logged = isset($_SESSION['logged']) ? $_SESSION['logged'] : false;
 </head>
 <body>
     <header>
-        <div class="content">
-            <div class="wrapper-header">
-                <div class="logo">
-                    <!-- <img src="" alt=""> -->
-                    <a href="/">
-                        <i class="fa-solid fa-eye"></i>
-                        Blog
-                    </a>
-                </div>
-                <div class="search">
-                    <input type="search" name="search" id="search" placeholder="Pesquisa...">
-                    <div class="result">
-                        <ul id="result"></ul>
+        <div class="wrapper-header">
+            <div class="content">
+                <div class="wrapper-header-itens">
+                    <div class="logo">
+                        <!-- <img src="" alt=""> -->
+                        <a href="/">
+                            <i class="fa-solid fa-eye"></i>
+                            Blog
+                        </a>
                     </div>
-                </div>
-                <div class="login">
-                    <?php if(!$logged): ?>
-                        <a href="?page=login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                    <?php else: ?>
-                        <a href="?page=posts" style="margin-right: 20px"><i class="fa-solid fa-lock"></i> Adm</a>
-                        <a href="?page=logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                    <?php endif; ?>
+                    <div class="search">
+                        <input type="search" name="search" id="search" placeholder="Pesquisa...">
+                        <div class="result">
+                            <ul id="result"></ul>
+                        </div>
+                    </div>
+                    <div class="login">
+                        <?php if(!$logged): ?>
+                            <a href="?page=login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        <?php else: ?>
+                            <a href="?page=posts" style="margin-right: 20px"><i class="fa-solid fa-lock"></i> Adm</a>
+                            <a href="?page=logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,8 +79,16 @@ $logged = isset($_SESSION['logged']) ? $_SESSION['logged'] : false;
         });
 
         $(document).ready(function() {
+            $('#search').on('search', function() {
+                if ($(this).val() === '') {
+                    $('#result').empty();
+                }
+            });
             $('#search').on('keyup', function() {
                 let search = $('#search').val();
+                if ($(this).val() === '') {
+                    $('#result').empty();
+                }
                 $.ajax({
                     type: "GET",
                     url: "pages/teste.php",
@@ -89,7 +99,7 @@ $logged = isset($_SESSION['logged']) ? $_SESSION['logged'] : false;
     
                             $('#result').empty();
                             result.forEach(function(element) {
-                                let tag = '<li><a href="?page=post&id='+ element['id'] +'">'+ element['title'] +'</a></li>';
+                                let tag = '<li><a href="?page=post&id='+ element['id'] +'"><p>'+ element['title'] +'</p></a></li>';
                                 $('#result').append(tag);
                             });
                         }

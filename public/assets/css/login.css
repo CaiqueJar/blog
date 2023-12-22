@@ -35,3 +35,8 @@
     font-size: 1rem;
     cursor: pointer;
 }
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

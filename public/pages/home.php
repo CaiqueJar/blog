@@ -12,6 +12,9 @@ $posts->execute();
 $posts = $posts->fetchAll();
 ?>
 <link rel="stylesheet" href="assets/css/home.css">
+
+<?= get('email') ?>
+
 <main>
     <div class="content">
         <div class="wrapper-main">
@@ -53,6 +56,17 @@ $posts = $posts->fetchAll();
                     </div>
                 <?php endforeach; ?>
             </div>
+        </div>
+    </div>
+</section>
+<section class="newsletter">
+    <div class="content">
+        <div class="wrapper-newsletter">
+            <h3>Deseja receber notificação sempre que algo novo aparecer por aqui? Inscreva-se</h3>
+            <form class="email" action="/pages/forms/newsletter.php" method="POST">
+                <input type="email" name="email" id="email" placeholder="Digite seu melhor e-mail">
+                <button type="submit">Me inscreva</button>
+            </form>
         </div>
     </div>
 </section>

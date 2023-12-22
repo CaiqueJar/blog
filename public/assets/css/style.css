@@ -16,37 +16,60 @@ body {
 }
 header {
     box-shadow: 0 4px 6px #f7f7f7;
+    position: sticky;
+    padding-bottom: 83px;
+    z-index: 999;
+}
+header .content {
+    overflow: inherit;
 }
 .wrapper-header {
+    position: fixed;
+    background-color: #f7f7f7;
+    width: 100%;
+    box-shadow: 0 2px 4px #d3d3d3;
+}
+.wrapper-header-itens {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     margin-bottom: 20px;
 }
-.wrapper-header .search {
+.wrapper-header-itens .search {
     position: relative;
+    width: 36%;
 }
-.wrapper-header .search input {
+.wrapper-header-itens .search input {
     padding: 6px;
     border-radius: 10px;
     border: #b3b3b3 1px solid;
+    width: 100%;
 }
-.wrapper-header .search #result  {
+.wrapper-header-itens .search #result  {
     list-style: none;
     position: absolute;
     width: 100%;
 }
 .wrapper-header .search #result li {
+    background-color: #f7f7f7;
     border: #b3b3b3 1px solid;
+    padding: 2px 8px;
 }
-.wrapper-header .logo a, 
-.wrapper-header .login a {
+.wrapper-header .search #result li:hover {
+    background-color: #f0f0f0;
+}
+.wrapper-header .search #result li a {
+    text-decoration: none;
+    color: black;
+}
+.wrapper-header-itens .logo a, 
+.wrapper-header-itens .login a {
     font-weight: 600;
     color: black;
     text-decoration: none;
 }
-.wrapper-header .logo a {
+.wrapper-header-itens .logo a {
     font-size: 2rem;
 }
 .alert {
@@ -95,4 +118,35 @@ footer .wrapper-footer .icons a {
 }
 footer .wrapper-footer .copy {
     font-size: .8rem;
+}
+section.newsletter {
+    background-color: #f7f7f7;
+}
+section.newsletter .wrapper-newsletter {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+}
+section.newsletter .wrapper-newsletter h3 {
+    flex-basis: 50%;
+    color: #262626;
+}
+section.newsletter .wrapper-newsletter .email {
+    flex-basis: 50%;
+    text-align: center;
+}
+section.newsletter .wrapper-newsletter .email input {
+    padding: 6px;
+    border-radius: 10px;
+    border: #b3b3b3 1px solid;
+    width: 60%;
+}
+section.newsletter .wrapper-newsletter .email button {
+    padding: 6px;
+    border-radius: 10px;
+    background: #e7e7e7;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #262626;
+    border: none;
 }

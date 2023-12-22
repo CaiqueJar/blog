@@ -12,7 +12,7 @@
         if($user->password == $validate->password) {
             $_SESSION['logged'] = true;
             flash('success', 'Logado com sucesso!', 'success');
-            return redirect('posts');
+            return redirect('adm');
         }
     }
 
